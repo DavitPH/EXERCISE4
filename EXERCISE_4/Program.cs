@@ -55,6 +55,7 @@ namespace Stack
         }
         public void display()
         {
+            Console.WriteLine();
             Node tmp;
             if (empty())
                 Console.WriteLine("\nStack Empty");
@@ -83,7 +84,9 @@ namespace Stack
                 Console.WriteLine("2. Pop");
                 Console.WriteLine("3. Display");
                 Console.WriteLine("4. Exit");
-                Console.WriteLine("\nEnter your choice");
+                Console.Write("\nEnter your choice : ");
+                Console.WriteLine("");
+                Console.WriteLine("------------");
                 string sInput = Console.ReadLine();
                 char ch = Convert.ToChar(sInput == "" ? "0" : sInput);
                 switch (ch)
@@ -123,6 +126,8 @@ namespace Stack
                         s.pop();
                         break;
                     case '3':
+                        
+                        Console.WriteLine("Items are : ");
                         s.display();
                         break;
                     case '4':
