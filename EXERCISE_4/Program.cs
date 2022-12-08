@@ -66,7 +66,12 @@ namespace Stack
             }
         }
     
-       
+        public void pop()
+        {
+            Console.WriteLine("\nThe popped element is: " + top.info);
+            top = top.next;
+        }
+        
     }
 }
 
