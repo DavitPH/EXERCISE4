@@ -16,7 +16,17 @@ namespace Stack
             next = n;
         }
     }
-    
+
+    class Stacks
+    {
+        int[] davit = new int [27];
+        int n;
+        int i;
+
+
+
+       
+    }
 }
 
 
