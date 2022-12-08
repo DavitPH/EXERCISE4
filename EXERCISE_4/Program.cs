@@ -4,12 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EXERCISE_4
+namespace Stack
 {
-    class Program
+    class Node
     {
-        static void Main(string[] args)
+        public string info;
+        public Node next;
+        public Node(string i, Node n)
         {
+            info = i;
+            next = n;
         }
     }
+    
 }
+
+
+
+
+
+
+
+
