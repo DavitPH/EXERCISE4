@@ -19,9 +19,6 @@ namespace Stack
 
     class Stacks
     {
-        int[] davit = new int [27];
-        int n;
-        int i;
 
 
 
@@ -39,31 +36,16 @@ namespace Stack
         }
         public void push(string element)
         {
-            while (true)
-            {
-                Console.Write("Enter of Numbers of Element in the Array : ");
-                string s = Console.ReadLine();
-                n = Int32.Parse(s);
-                if ((n > 0) && (n <= 27))
-                    break;
-                else
-                    Console.Write("\n Array should have minimun 1 and maximum 27 element. \n");
-            }
+          
 
-            //Accept array element
-            Console.WriteLine("");
-            Console.WriteLine("--------------------");
-            Console.WriteLine("Enter Array Element ");
-            Console.WriteLine("--------------------");
 
-            for (i = 0; i < n; i++)
-            {
+            
                 Node fresh;
                 fresh = new Node(element, null);
                 fresh.next = top;
                 top = fresh;
                 Console.WriteLine("\n" + element + " pushed.");
-            }
+            
         }
     
         public void pop()
@@ -87,6 +69,11 @@ namespace Stack
         }
         static void Main(string[] args)
         {
+            int[] davit = new int[27];
+            int n;
+            int i;
+            string j;
+
             Stacks s = new Stacks();
             while (true)
             {
@@ -102,9 +89,30 @@ namespace Stack
                 switch (ch)
                 {
                     case '1':
-                        Console.Write("\nEnter a word: ");
-                        string num = Convert.ToString(Console.ReadLine());
-                        s.push(num);
+                        while (true)
+                        {
+                            Console.Write("Enter of Numbers of Element in the Array : ");
+                            j = Console.ReadLine();
+                            n = Int32.Parse(j);
+                            if ((n > 0) && (n <= 27))
+                                break;
+                            else
+                                Console.Write("\n Array should have minimun 1 and maximum 27 element. \n");
+                        }
+
+                        //Accept array element
+                        Console.WriteLine("");
+                        Console.WriteLine("--------------------");
+                        Console.WriteLine("Enter Array Element ");
+                        Console.WriteLine("--------------------");
+
+                        for (i = 0; i < n; i++)
+                        {
+                            Console.Write("\nEnter a word: ");
+                            string num = Convert.ToString(Console.ReadLine());
+                            s.push(num);
+                        }
+
                         break;
                     case '2':
                         if (s.empty())
