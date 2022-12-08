@@ -87,6 +87,7 @@ namespace Stack
         }
         static void Main(string[] args)
         {
+            Stacks s = new Stacks();
         }
     }
 }
